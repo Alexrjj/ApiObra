@@ -12,7 +12,7 @@ app.use(sobRouter);
 
 // Rota Index
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.render('pages/index')
 });
 
 // Inicialização do servidor
