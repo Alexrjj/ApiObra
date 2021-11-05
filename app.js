@@ -1,20 +1,19 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const sobRouter = require("./Routes/SobRouter");
 
-// JSON & View Engine
+// JSON, View Engine & Routes
 app.use(express.json());
 app.set("view engine", "ejs");
+app.use(sobRouter);
 
-// TODO - Rotas
-// TODO - Controllers
 // TODO - Página Index
 
 // Rota Index
 app.get("/", (req, res) => {
   res.send("hello");
 });
-
 
 // Inicialização do servidor
 app.listen(port, () => {
