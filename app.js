@@ -8,8 +8,6 @@ app.use(express.json());
 app.set("view engine", "ejs");
 app.use(sobRouter);
 
-// TODO - Página Index
-
 // Rota Index
 app.get("/", (req, res) => {
   res.render('pages/index')
