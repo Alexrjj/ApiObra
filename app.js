@@ -6,7 +6,6 @@ const port = 3000;
 app.use(express.json());
 app.set("view engine", "ejs");
 
-// TODO - Banco de dados
 // TODO - Rotas
 // TODO - Controllers
 // TODO - Página Index
