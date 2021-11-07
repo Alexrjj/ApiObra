@@ -7,6 +7,7 @@ const sobRouter = require("./Routes/SobRouter");
 app.use(express.json());
 app.set("view engine", "ejs");
 app.use(sobRouter);
+app.use(express.static(__dirname + '/public'));
 
 // Rota Index
 app.get("/", (req, res) => {
