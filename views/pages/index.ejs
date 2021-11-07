@@ -1,500 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include('../partials/head'); %>
-  </head>
-  <body class="container">
-    <header><%- include('../partials/header'); %></header>
 
-    <main>
-      <div class="jumbotron">
-        <form>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-calendar"></i>
-                  </div>
-                </div>
-                <input
-                  id="data"
-                  name="data"
-                  placeholder="Data de execução"
-                  type="date"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-database"></i>
-                  </div>
-                </div>
-                <input
-                  id="etapa"
-                  name="etapa"
-                  placeholder="Etapa"
-                  type="text"
-                  class="form-control"
-                  required="required"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-hourglass-1"></i>
-                  </div>
-                </div>
-                <input
-                  id="hr_in"
-                  name="hr_in"
-                  placeholder="Início atividade"
-                  type="text"
-                  class="form-control"
-                  required="required"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-hourglass-3"></i>
-                  </div>
-                </div>
-                <input
-                  id="hr_fin"
-                  name="hr_fin"
-                  placeholder="Término atividade"
-                  type="text"
-                  class="form-control"
-                  required="required"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-street-view"></i>
-                  </div>
-                </div>
-                <input
-                  id="estrutura"
-                  name="estrutura"
-                  placeholder="Estrutura necessária"
-                  type="text"
-                  class="form-control"
-                  required="required"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-align-justify"></i>
-                  </div>
-                </div>
-                <input
-                  id="observacao"
-                  name="observacao"
-                  placeholder="Observações"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4 col-form-label">Apoio</label>
-            <div class="col-8">
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_0"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="autopista"
-                  />
-                  <label for="apoio_0" class="custom-control-label"
-                    >Autopista</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_1"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="bprv"
-                  />
-                  <label for="apoio_1" class="custom-control-label">BPRV</label>
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_2"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="guarda"
-                  />
-                  <label for="apoio_2" class="custom-control-label"
-                    >Guarda Municipal</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_3"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="truck"
-                  />
-                  <label for="apoio_3" class="custom-control-label"
-                    >Caminhão Trucado</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_4"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="retro"
-                  />
-                  <label for="apoio_4" class="custom-control-label"
-                    >Retro escavadeira</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_5"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="compressor"
-                  />
-                  <label for="apoio_5" class="custom-control-label"
-                    >Compressor</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_6"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="martelete"
-                  />
-                  <label for="apoio_6" class="custom-control-label"
-                    >Martelete</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_7"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="geradorbt"
-                  />
-                  <label for="apoio_7" class="custom-control-label"
-                    >Gerador BT</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="apoio"
-                    id="apoio_8"
-                    type="checkbox"
-                    class="custom-control-input"
-                    value="geradormt"
-                  />
-                  <label for="apoio_8" class="custom-control-label"
-                    >Gerador MT</label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4 col-form-label">Tipo de SGD:</label>
-            <div class="col-8">
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="tipo_sgd"
-                    id="tipo_sgd_0"
-                    type="checkbox"
-                    required="required"
-                    class="custom-control-input"
-                    value="atmt"
-                  />
-                  <label for="tipo_sgd_0" class="custom-control-label"
-                    >AT/MT</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="tipo_sgd"
-                    id="tipo_sgd_1"
-                    type="checkbox"
-                    required="required"
-                    class="custom-control-input"
-                    value="bt"
-                  />
-                  <label for="tipo_sgd_1" class="custom-control-label"
-                    >BT</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="tipo_sgd"
-                    id="tipo_sgd_2"
-                    type="checkbox"
-                    required="required"
-                    class="custom-control-input"
-                    value="tet"
-                  />
-                  <label for="tipo_sgd_2" class="custom-control-label"
-                    >TeT</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="tipo_sgd"
-                    id="tipo_sgd_3"
-                    type="checkbox"
-                    required="required"
-                    class="custom-control-input"
-                    value="vyp"
-                  />
-                  <label for="tipo_sgd_3" class="custom-control-label"
-                    >VyP</label
-                  >
-                </div>
-              </div>
-              <div class="custom-controls-stacked">
-                <div class="custom-control custom-checkbox">
-                  <input
-                    name="tipo_sgd"
-                    id="tipo_sgd_4"
-                    type="checkbox"
-                    required="required"
-                    class="custom-control-input"
-                    value="arealivre"
-                  />
-                  <label for="tipo_sgd_4" class="custom-control-label"
-                    >Sem desligamento</label
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-sort-numeric-asc"></i>
-                  </div>
-                </div>
-                <input
-                  id="num_equip"
-                  name="num_equip"
-                  placeholder="Número do equipamento"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="hr_in_sgd" class="col-4 col-form-label"></label>
-            <div class="col-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-hourglass-1"></i>
-                  </div>
-                </div>
-                <input
-                  id="hr_in_sgd"
-                  name="hr_in_sgd"
-                  placeholder="Início desligamento"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="hr_fin_sgd" class="col-4 col-form-label"></label>
-            <div class="col-3">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-hourglass-3"></i>
-                  </div>
-                </div>
-                <input
-                  id="hr_fin_sgd"
-                  name="hr_fin_sgd"
-                  placeholder="Término desligamento"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="alimentador" class="col-4 col-form-label"></label>
-            <div class="col-2">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-flash"></i>
-                  </div>
-                </div>
-                <input
-                  id="alimentador"
-                  name="alimentador"
-                  placeholder="Alimentador"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-map-marker"></i>
-                  </div>
-                </div>
-                <input
-                  id="logradouro"
-                  name="logradouro"
-                  placeholder="Logradouro"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-map-marker"></i>
-                  </div>
-                </div>
-                <input
-                  id="bairro"
-                  name="bairro"
-                  placeholder="Bairro"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-4"></label>
-            <div class="col-4">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-map-marker"></i>
-                  </div>
-                </div>
-                <input
-                  id="municipio"
-                  name="municipio"
-                  placeholder="Município"
-                  type="text"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="descricao_servico" class="col-4 col-form-label"
-              >Descrição do Serviço</label
-            >
-            <div class="col-6">
-              <textarea
-                id="descricao_servico"
-                name="descricao_servico"
-                cols="40"
-                rows="5"
-                required="required"
-                class="form-control"
-              ></textarea>
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="offset-4 col-8">
-              <button name="submit" type="submit" class="btn btn-primary">
-                Salvar
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </main>
+<head>
+  <%- include('../partials/head'); %>
+</head>
 
-    <footer><%- include('../partials/footer'); %></footer>
-  </body>
+<body class="container">
+  <header><%- include('../partials/header'); %></header>
+  <main>
+    <div class="jumbotron">
+      <form>
+        <div class="form-group row">
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-check-square"></i>
+                </div>
+              </div>
+              <input id="etapa" name="etapa" placeholder="Etapa" type="text" class="form-control" required="required">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-users"></i>
+                </div>
+              </div>
+              <input id="estrutura" name="estrutura" placeholder="Estrutura" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-hourglass-start"></i>
+                </div>
+              </div>
+              <input id="hr_in" name="hr_in" placeholder="Início atividade" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-hourglass-end"></i>
+                </div>
+              </div>
+              <input id="hr_fim" name="hr_fim" placeholder="Fim atividade" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-cab"></i>
+                </div>
+              </div>
+              <input id="sgd" name="sgd" placeholder="Apoio" type="text" class="form-control" required="required">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-flash"></i>
+                </div>
+              </div>
+              <input id="sgd" name="sgd" placeholder="Tipo de SGD" type="text" class="form-control" required="required">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-sort-numeric-asc"></i>
+                </div>
+              </div>
+              <input id="equipamento" name="equipamento" placeholder="Dispositivo(s)" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-hourglass-start"></i>
+                </div>
+              </div>
+              <input id="sgd_in" name="sgd_in" placeholder="Início desligamento" type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-hourglass-end"></i>
+                </div>
+              </div>
+              <input id="sgd_fim" name="sgd_fim" placeholder="Fim desligamento" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-flash"></i>
+                </div>
+              </div>
+              <input id="alimentador" name="alimentador" placeholder="Alimentador" type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-12">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+              </div>
+              <input id="logradouro" name="logradouro" placeholder="Logradouro" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+              </div>
+              <input id="bairro" name="bairro" placeholder="Bairro" type="text" class="form-control"
+                required="required">
+            </div>
+          </div>
+          <div class="col">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+              </div>
+              <!-- <input id="municipio" name="municipio" placeholder="Município" type="text" class="form-control" required="required"> -->
+              <input class="form-control" list="municipio" id="exampleDataList" placeholder="Município">
+              <datalist id="municipio">
+                <option value="ITABORAÍ">
+                <option value="SÃO GONÇALO">
+                <option value="RIO BONITO">
+                <option value="TANGUÁ">
+              </datalist>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="observacoes" class="col-3 col-form-label">Observações:</label>
+          <div class="col-12">
+            <textarea id="observacoes" name="observacoes" cols="40" rows="2" class="form-control"
+              required="required"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="descricao" class="col-6 col-form-label">Descrição do Serviço:</label>
+          <div class="col-12">
+            <textarea id="descricao" name="descricao" cols="40" rows="5" class="form-control"
+              required="required"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-3 col-9">
+            <button name="submit" type="submit" class="btn btn-primary botao">Salvar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer><%- include('../partials/footer'); %></footer>
+</body>
+
 </html>
